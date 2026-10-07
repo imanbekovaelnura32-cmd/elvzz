@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой первый сайт</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #111827;
+      color: white;
+      padding: 40px 20px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+      border: none;
+      background: #3b82f6;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Привет! Это мой сайт 🚀</h1>
+  <p>Кликов сделано: <span id="count" style="font-weight:bold; color:#60a5fa;">0</span></p>
+  <button id="btn">Нажми на меня!</button>
+
+  <script>
+    let count = 0;
+    const btn = document.getElementById('btn');
+    const countDisplay = document.getElementById('count');
+
+    btn.addEventListener('click', () => {
+      count++;
+      countDisplay.textContent = count;
+      btn.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    });
+  </script>
+</body>
+</html>
